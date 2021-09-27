@@ -31,14 +31,20 @@ const removeFromDb = (id) => {
   }
 };
 
-/* const getStoredCart = () => {
+const getStoredCart = () => {
   const exists = getDb();
   return exists ? JSON.parse(exists) : {};
-}; */
+};
 
-/* const clearTheCart = () => {
+const clearTheCart = () => {
   localStorage.removeItem("shopping_cart");
-}; */
+};
 
-export { AddToDb, removeFromDb, getDb };
-// export { addToDb, removeFromDb as deleteFromDb, clearTheCart, getStoredCart };
+// export { AddToDb, removeFromDb, getDb, getStoredCart };
+export {
+  AddToDb,
+  removeFromDb as deleteFromDb,
+  clearTheCart,
+  getStoredCart,
+  getDb,
+};

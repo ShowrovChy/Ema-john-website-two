@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Product from "../Product/Product";
 import Cart from "../Cart/Cart";
-import { AddToDb, getDb } from "../../utilities/fakedb";
+import { AddToDb, getStoredCart } from "../../utilities/fakedb";
 import "./Shop.css";
 
 const Shop = () => {
@@ -22,7 +22,9 @@ const Shop = () => {
     AddToDb(product.key);
   };
   useEffect(() => {
-    fetch("./products.JSON")
+    fetch(
+      "https://raw.githubusercontent.com/ProgrammingHero1/ema-john-simple-resources/master/fakeData/products.JSON"
+    )
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);
@@ -31,17 +33,20 @@ const Shop = () => {
   }, []);
   useEffect(() => {
     if (products.length) {
-      const savedDb = getDb();
+      const savedDb = getStoredCart();
       const addedProduct = [];
       for (const productId in savedDb) {
         const foundPd = products.find((pd) => pd.key === productId);
-        const quantity = savedDb[productId];
-        foundPd.quantity = quantity;
-        addedProduct.push(foundPd);
+        if (foundPd) {
+          const quantity = savedDb[productId];
+          foundPd.quantity = quantity;
+          addedProduct.push(foundPd);
+        }
       }
       setCart(addedProduct);
     }
   }, [products]);
+
   return (
     <div className=" grand-container">
       <div className=" input-container">
