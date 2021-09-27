@@ -1,0 +1,24 @@
+.cart {
+  position: sticky;
+  top: 5px;
+  right: 10px;
+  background-color: rgb(238, 234, 234);
+  box-shadow: 2px 4px 6px rgb(179, 177, 177);
+  height: 400px;
+  padding: 15px 30px;
+  border-radius: 10px;
+  line-height: 45px;
+  margin-right: 20px;
+  margin-top: 5px;
+}
+.heading {
+  text-align: center;
+  font-weight: 800px;
+}
+.heading-cart {
+  text-align: center;
+  margin-top: 6px;
+}
+.fa-shopping-cart {
+  font-size: 2em;
+}
