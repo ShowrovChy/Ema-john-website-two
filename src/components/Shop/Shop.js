@@ -22,9 +22,10 @@ const Shop = () => {
     AddToDb(product.key);
   };
   useEffect(() => {
-    fetch(
+    fetch("/products.JSON")
+      /*     fetch(
       "https://raw.githubusercontent.com/ProgrammingHero1/ema-john-simple-resources/master/fakeData/products.JSON"
-    )
+    ) */
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);

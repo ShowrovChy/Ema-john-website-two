@@ -8,7 +8,7 @@
 }
 .container-shop {
   display: grid;
-  grid-template-columns: 8fr 4fr;
+  grid-template-columns: 9fr 3fr;
   grid-column-gap: 15px;
   background-color: #cce;
   scroll-behavior: smooth;
