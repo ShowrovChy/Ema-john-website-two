@@ -44,6 +44,7 @@ const Cart = (props) => {
           {grandTotal.toFixed(2)}
         </span>
       </h3>
+      <div style={{ textAlign: "center" }}>{props.children}</div>
     </div>
   );
 };

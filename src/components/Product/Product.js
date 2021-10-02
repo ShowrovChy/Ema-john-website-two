@@ -8,11 +8,15 @@ const Product = (props) => {
   return (
     <div className="product">
       <div className="img">
-        <img src={img} alt="" />
+        <img className="image" src={img} alt="" />
       </div>
       <div className="desc">
         <h3 className="head-name">{name}</h3>
-        <h4>By {seller} </h4>
+        <p>
+          <small>By</small> {seller}{" "}
+        </p>
+        <h4> Only {stock} left</h4>
+
         <h2>
           <Rating
             readonly
@@ -21,9 +25,11 @@ const Product = (props) => {
             initialRating={star}
           />
         </h2>
-        <h4> Only {stock} left</h4>
         <h2> Price {price}</h2>
-        <button onClick={() => props.AddToCart(props.product)}>
+        <button
+          className="button-style"
+          onClick={() => props.AddToCart(props.product)}
+        >
           Add to Cart
         </button>
       </div>

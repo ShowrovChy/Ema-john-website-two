@@ -41,10 +41,4 @@ const clearTheCart = () => {
 };
 
 // export { AddToDb, removeFromDb, getDb, getStoredCart };
-export {
-  AddToDb,
-  removeFromDb as deleteFromDb,
-  clearTheCart,
-  getStoredCart,
-  getDb,
-};
+export { AddToDb, removeFromDb, clearTheCart, getStoredCart, getDb };

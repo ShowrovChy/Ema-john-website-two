@@ -1,0 +1,14 @@
+.item-style {
+  background-color: rgb(238, 234, 234);
+  padding: 10px 30px;
+  margin: 10px 0;
+  border-radius: 10px;
+}
+.item-Name {
+  color: blue;
+  margin-bottom: 15px;
+}
+
+.item-price {
+  margin-bottom: 13px;
+}

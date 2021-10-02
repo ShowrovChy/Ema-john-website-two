@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import { getDb } from "../utilities/fakedb";
+import { getStoredCart } from "../utilities/fakedb";
 
 const useCart = (products) => {
   const [cart, setCart] = useState([]);
   useEffect(() => {
     if (products.length) {
-      const savedCart = getDb();
+      const savedCart = getStoredCart();
       // console.log(savedCart);
       const storedCart = [];
       for (const key in savedCart) {
