@@ -18,7 +18,7 @@ const Cart = (props) => {
         {props.cart.length}{" "}
       </h1> */}
       <h1 className="heading-cart">
-        <i class="fas fa-shopping-cart"></i>
+        <i className="fas fa-shopping-cart"></i>
         {totalQuantity}
       </h1>
 

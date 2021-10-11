@@ -22,7 +22,8 @@ const Shop = () => {
     if (exists) {
       const rest = cart.filter((pd) => pd.key !== product.key);
       exists.quantity = exists.quantity + 1;
-      newCart = [...rest, product];
+      newCart = [...rest, exists];
+      // newCart = [...rest, product];
     } else {
       product.quantity = 1;
       newCart = [...cart, product];
@@ -31,7 +32,7 @@ const Shop = () => {
     AddToDb(product.key);
   };
   useEffect(() => {
-    fetch("/products.JSON")
+    fetch("/products.json")
       /*     fetch(
       "https://raw.githubusercontent.com/ProgrammingHero1/ema-john-simple-resources/master/fakeData/products.JSON"
     ) */
@@ -66,7 +67,7 @@ const Shop = () => {
           type="text"
           placeholder="Search Product"
         />
-        <i class="< fas fa-search cart-icon"></i>{" "}
+        <i className="< fas fa-search cart-icon"></i>{" "}
         <span className="count"> {displayProducts.length}</span>
       </div>
       <div className="container-shop">

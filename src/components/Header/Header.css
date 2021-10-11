@@ -17,8 +17,21 @@
   color: rgb(253, 251, 251);
   line-height: 40px;
   padding: 7px;
+  border-radius: 5px;
 }
 .nav-container a:hover {
+  background-color: lightgray;
+  color: black;
+}
+.logOut-btn {
+  background-color: transparent;
+  border: none;
+  color: rgb(253, 251, 251);
+  font-size: 20px;
+  padding: 7px;
+  border-radius: 5px;
+}
+.logOut-btn:hover {
   background-color: lightgray;
   color: black;
 }
